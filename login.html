@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .login{
+            align-items:center ;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 10.0rem;
+            width: 26.0rem;
+        }
+
+        form{
+         font-size: 1.0rem;
+        }
+
+        form input {
+            font-size: 1.0rem;
+        }
+
+        .login form{
+            padding: 0 4.0rem;
+            box-sizing: border-box;
+        }
+
+       .login h1{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 1.0rem;
+            font-weight: bold;
+        }
+
+       form .text{
+           position: relative;
+           border-bottom: 0.2rem solid rgb(128, 118, 118) ;
+           margin: 3.0rem 0;
+        }
+
+        .text input{
+            width: 100%;
+            padding: 0 0.5rem;
+            height: 4.0rem;
+            font-size: 1.6rem;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .text label{
+            position: absolute;
+            top: 50%;
+            left: 0.5rem;
+            color: #adadad;
+            transform: translateY(-50%);
+            font-size: 1.6rem;
+            pointer-events: none;
+        }
+
+        .text input:focus ~ label,
+        .text input:valid ~ label{
+            top: -0.5rem;
+            color: #c43e3e;
+        }
+
+
+
+        .text input:focus ~ span::before,
+        .text input:valid ~ span::before{
+            width: 100%;
+        }
+
+        .text span::before{
+         content: "";
+         position: absolute;
+         top: 4.0rem;
+         left: 0;
+         width: 0;
+         height: 0.2rem;
+         background: brown;
+         transition: .5s;
+        }
+
+
+        .pass{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 2.4rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .pass:hover{
+            text-decoration: underline;
+        }
+        .submit{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 1.5rem;
+            
+        }
+
+        .submit input{
+            width: 20.0rem;
+            height: 2.0rem;
+            border-radius:2.0rem ;
+            color: rgb(233, 233, 235);
+            background-color: blue;
+            font-weight: bold;
+            border: blue;
+        }
+
+
+        .submit input:hover{
+            color: blue;
+            background-color: rgb(163, 152, 152);
+        }
+
+        .signup{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 1.0rem;
+            font-weight: bold;
+        }
+
+        .signup a{
+            text-decoration: none;
+            color: blue;
+        }
+
+        .signup:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   <div class="login">
+       <h1>Login</h1>
+       <form method="post">
+           <div class="text">
+               <input type="text" required>
+               <span></span>
+               <label>username</label>
+           </div>
+
+           <div class="text">
+            <input type="password" required>
+            <span></span>
+            <label>Password</label>
+        </div>
+
+        <div class="pass">Forgot Password ?</div>
+       <div class="submit"><input type="submit" value="Login"></div> 
+        <div class="signup">
+            Not a Member ? <a href="#">signup</a>
+        </div>
+       </form>
+   </div>
+    
+
+    <script>
+        
+    </script>
+</body>
+</html>
